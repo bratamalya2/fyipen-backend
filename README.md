@@ -25,8 +25,10 @@
 21. Modify PROJECT_DIR/utils/token.py -> Add a long random alphanumeric secret key to the file.
 22. Your server is ready to run.
 23. Execute the server, by running from terminal -> uvicorn main:app --reload
+24. When connecting with the frontend, ensure your frontend IP address is whitelisted for CORS policy. This can be checked within PROJECT_DIR/main.py -> origins. I have already included http://localhost:3000.
 
 # Points to note:-
 
 1. The backend API has a route (/addBook) to add new book to the DB. This API also needs an imgUrl. For the sake of accessibility, I request you to add images from products/books from amazon.in because I have whitelisted the same for usage within the frontend.
 2. This API runs on localhost (PORT: 8000). So keep it free.
+3. For CORS errors check point 24 of Execution.
